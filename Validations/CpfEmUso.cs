@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using API_Folhas.Models;
+using car_rentals_project.Models;
 
-namespace API_Folhas.Validations
+namespace car_rentals_project.Validations
 {
     public class CpfEmUso : ValidationAttribute
     {
@@ -15,8 +15,8 @@ namespace API_Folhas.Validations
                 validationContext.
                 GetService(typeof(DataContext));
 
-            Funcionario resultado =
-                context.Funcionarios.FirstOrDefault
+            Client resultado =
+                context.Client.FirstOrDefault
                 (
                     f => f.Cpf.Equals(cpf)
                 );

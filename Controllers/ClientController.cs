@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using API_Folhas.Models;
+using car_rentals_project.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace API_Folhas.Controllers
+namespace car_rentals_project.Controllers
 {
     [ApiController]
     [Route("api/client")]

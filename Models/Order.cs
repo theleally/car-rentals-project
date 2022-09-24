@@ -1,8 +1,10 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-using API_Folhas.Validations;
+using car_rentals_project.Validations;
+using car_rentals_project.Models;
 
-namespace API_Folhas.Models
+
+namespace car_rentals_project.Models
 {
     public class Order
     {

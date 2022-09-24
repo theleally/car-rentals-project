@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/leonardo/car-rentals-project/car-rentals-project.csproj": {}
+    "/Users/Leandro/Documents/GitHub/car-rentals-project/car-rentals-project.csproj": {}
   },
   "projects": {
-    "/home/leonardo/car-rentals-project/car-rentals-project.csproj": {
+    "/Users/Leandro/Documents/GitHub/car-rentals-project/car-rentals-project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/leonardo/car-rentals-project/car-rentals-project.csproj",
+        "projectUniqueName": "/Users/Leandro/Documents/GitHub/car-rentals-project/car-rentals-project.csproj",
         "projectName": "car-rentals-project",
-        "projectPath": "/home/leonardo/car-rentals-project/car-rentals-project.csproj",
-        "packagesPath": "/home/leonardo/.nuget/packages/",
-        "outputPath": "/home/leonardo/car-rentals-project/obj/",
+        "projectPath": "/Users/Leandro/Documents/GitHub/car-rentals-project/car-rentals-project.csproj",
+        "packagesPath": "/Users/Leandro/.nuget/packages/",
+        "outputPath": "/Users/Leandro/Documents/GitHub/car-rentals-project/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/leonardo/.nuget/NuGet/NuGet.Config"
+          "/Users/Leandro/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/167/sdk/5.0.408/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
         }
       }
     }
