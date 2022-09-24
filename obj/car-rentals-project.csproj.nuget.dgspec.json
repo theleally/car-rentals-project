@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Leandro/Documents/GitHub/car-rentals-project/car-rentals-project.csproj": {}
+    "/home/leonardo/car-rentals-project/car-rentals-project.csproj": {}
   },
   "projects": {
-    "/Users/Leandro/Documents/GitHub/car-rentals-project/car-rentals-project.csproj": {
+    "/home/leonardo/car-rentals-project/car-rentals-project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Leandro/Documents/GitHub/car-rentals-project/car-rentals-project.csproj",
+        "projectUniqueName": "/home/leonardo/car-rentals-project/car-rentals-project.csproj",
         "projectName": "car-rentals-project",
-        "projectPath": "/Users/Leandro/Documents/GitHub/car-rentals-project/car-rentals-project.csproj",
-        "packagesPath": "/Users/Leandro/.nuget/packages/",
-        "outputPath": "/Users/Leandro/Documents/GitHub/car-rentals-project/obj/",
+        "projectPath": "/home/leonardo/car-rentals-project/car-rentals-project.csproj",
+        "packagesPath": "/home/leonardo/.nuget/packages/",
+        "outputPath": "/home/leonardo/car-rentals-project/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/Leandro/.nuget/NuGet/NuGet.Config"
+          "/home/leonardo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -38,6 +38,20 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -61,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/167/sdk/5.0.408/RuntimeIdentifierGraph.json"
         }
       }
     }

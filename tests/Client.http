@@ -1,0 +1,30 @@
+### Listar os clientes
+GET https://localhost:5001/api/cliente/listar
+
+### Buscar um cliente
+GET https://localhost:5001/api/cliente/buscar/12345678912
+
+### Cadastrar umcliente
+POST https://localhost:5001/api/cliente/cadastrar
+Content-Type: application/json
+
+{
+    "nome" : "Leonardo Marques",
+    "cpf" : "12345678912",    
+    "email" : "leo@gmail.com",
+    "cellphone" : "(041)987654321"
+}
+
+### Deletar um cliente
+DELETE https://localhost:5001/api/cliente/deletar/9
+
+### Alterar um cliente
+PATCH https://localhost:5001/api/cliente/alterar
+Content-Type: application/json
+
+{
+    "clienteid" : 10,
+    "nome" : "nome editado",
+    "cpf" : "98765432112",
+    "cellphone" : "(041)912345678"
+}

@@ -1,0 +1,75 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using API_Folhas.Models;
+using Microsoft.AspNetCore.Mvc;
+
+namespace API_Folhas.Controllers
+{
+    [ApiController]
+    [Route("api/client")]
+    public class ClientController : ControllerBase
+    {
+        private readonly DataContext _context;
+
+        public ClientController(DataContext context) =>
+            _context = context;
+
+        private static List<Client> clients = new List<Client>();
+
+        // GET: /api/client/listar
+        [Route("listar")]
+        [HttpGet]
+        public IActionResult Listar() =>
+            Ok(_context.Client.ToList());
+
+        // POST: /api/client/cadastrar
+        [Route("cadastrar")]
+        [HttpPost]
+        public IActionResult Cadastrar([FromBody] Client client)
+        {
+            _context.Client.Add(client);
+            _context.SaveChanges();
+            return Created("", client);
+        }
+
+        // GET: /api/client/buscar/123
+        [Route("buscar/{cpf}")]
+        [HttpGet]
+        public IActionResult Buscar([FromRoute] string cpf)
+        {
+            Client client =
+                _context.Client.FirstOrDefault
+            (
+                f => f.Cpf.Equals(cpf)
+            );
+
+            return client != null ? Ok(client) : NotFound();
+        }
+
+        // DELETE: /api/client/deletar/1
+        [Route("deletar/{id}")]
+        [HttpDelete]
+        public IActionResult Deletar([FromRoute] int id)
+        {
+            Client client =
+                _context.Client.Find(id);
+            if (client != null)
+            {
+                _context.Client.Remove(client);
+                _context.SaveChanges();
+                return Ok(client);
+            }
+            return NotFound();
+        }
+
+        // PATCH: /api/client/alterar
+        [Route("alterar")]
+        [HttpPatch]
+        public IActionResult Alterar([FromBody] Client client)
+        {
+            _context.Client.Update(client);
+            _context.SaveChanges();
+            return Ok(client);
+        }
+    }
+}

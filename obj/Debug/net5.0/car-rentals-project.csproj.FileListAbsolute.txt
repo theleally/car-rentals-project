@@ -1,0 +1,7 @@
+/home/leonardo/car-rentals-project/obj/Debug/net5.0/car-rentals-project.csproj.AssemblyReference.cache
+/home/leonardo/car-rentals-project/obj/Debug/net5.0/car-rentals-project.GeneratedMSBuildEditorConfig.editorconfig
+/home/leonardo/car-rentals-project/obj/Debug/net5.0/car-rentals-project.AssemblyInfoInputs.cache
+/home/leonardo/car-rentals-project/obj/Debug/net5.0/car-rentals-project.AssemblyInfo.cs
+/home/leonardo/car-rentals-project/obj/Debug/net5.0/car-rentals-project.csproj.CoreCompileInputs.cache
+/home/leonardo/car-rentals-project/obj/Debug/net5.0/car-rentals-project.MvcApplicationPartsAssemblyInfo.cs
+/home/leonardo/car-rentals-project/obj/Debug/net5.0/car-rentals-project.MvcApplicationPartsAssemblyInfo.cache
