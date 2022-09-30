@@ -9,7 +9,7 @@ POST https://localhost:5001/api/automobile/cadastrar/
 Content-Type: application/json
 
 {
-  "automobileId": 21,
+  //"automobileId": 21,
   "type": "Carro passeio",
   "models": "Sedan",
   "brand": "Ford",

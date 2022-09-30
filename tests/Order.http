@@ -1,0 +1,29 @@
+### Listar os pedidos
+GET https://localhost:5001/api/order/listar
+
+### Buscar um pedido
+GET https://localhost:5001/api/order/buscar/1
+
+### Cadastrar um pedido
+POST https://localhost:5001/api/order/cadastrar
+Content-Type: application/json
+
+{
+    "clientId" : 1,
+    "automobileId" : 21,
+    "total_price" :1000    
+}
+
+### Deletar um pedido
+DELETE https://localhost:5001/api/order/deletar/9
+
+### Alterar um pedido
+PATCH https://localhost:5001/api/order/alterar
+Content-Type: application/json
+
+{
+    "clientId" : 10,
+    "name" : "nome editado",
+    "cpf" : "98765432112",
+    "cellphone" : "(041)912345678"
+}
