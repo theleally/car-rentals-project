@@ -1,0 +1,30 @@
+### Listar os aluguéis
+GET https://localhost:5001/api/rental/listar
+
+### Buscar um aluguel
+GET https://localhost:5001/api/rental/buscar/1
+
+### Cadastrar um aluguel
+POST https://localhost:5001/api/rental/cadastrar
+Content-Type: application/json
+
+{
+    "clientId" : 2,
+    "automobileId" : 21,
+    "Total_Days": "15",
+    "total_price" :1000    
+}
+
+### Deletar um aluguel
+DELETE https://localhost:5001/api/rental/deletar/3
+
+### Alterar um aluguel
+PATCH https://localhost:5001/api/rental/alterar
+Content-Type: application/json
+
+{
+    "clientId" : 2,
+    "automobileId" : 21,
+    "Total_Days": "30",
+    "total_price" :1000    
+}

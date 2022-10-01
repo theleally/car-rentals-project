@@ -13,6 +13,6 @@ namespace car_rentals_project.Models
 
         public DbSet<Client> Client { get; set; }
         public DbSet<Automobile> Automobile { get; set; }
-        public DbSet<Orders> Orders { get; set; }
+        public DbSet<Rental> Rental { get; set; }
     }
 }

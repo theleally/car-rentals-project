@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using car_rentals_project.Models;
 
 namespace car_rentals_project.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20221001191211_OrdersTable")]
+    partial class OrdersTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -82,9 +84,9 @@ namespace car_rentals_project.Migrations
                     b.ToTable("Client");
                 });
 
-            modelBuilder.Entity("car_rentals_project.Models.Rental", b =>
+            modelBuilder.Entity("car_rentals_project.Models.Orders", b =>
                 {
-                    b.Property<int>("RentalId")
+                    b.Property<int>("OrdersId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -110,16 +112,16 @@ namespace car_rentals_project.Migrations
                     b.Property<float>("Total_Price")
                         .HasColumnType("REAL");
 
-                    b.HasKey("RentalId");
+                    b.HasKey("OrdersId");
 
                     b.HasIndex("AutomobileId");
 
                     b.HasIndex("ClientId");
 
-                    b.ToTable("Rental");
+                    b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("car_rentals_project.Models.Rental", b =>
+            modelBuilder.Entity("car_rentals_project.Models.Orders", b =>
                 {
                     b.HasOne("car_rentals_project.Models.Automobile", "Automobile")
                         .WithMany()

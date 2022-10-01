@@ -9,10 +9,10 @@ POST https://localhost:5001/api/client/cadastrar
 Content-Type: application/json
 
 {
-    "name" : "Leonardo Marques",
-    "cpf" : "97765432212",    
-    "email" : "leo@gmail.com",
-    "cellphone" : "(041)987654321"
+    "name" : "Leandro Allysson",
+    "cpf" : "00835987609",    
+    "email" : "le@gmail.com",
+    "cellphone" : "(043)999999999"
 }
 
 ### Deletar um cliente

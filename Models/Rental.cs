@@ -7,10 +7,10 @@ using System.ComponentModel.DataAnnotations.Schema;//Add this component to forei
 
 namespace car_rentals_project.Models
 {
-    public class Orders
+    public class Rental
     {
-        public Orders() => CriadoEm = DateTime.Now;
-        public int OrdersId { get; set; }
+        public Rental() => CriadoEm = DateTime.Now;
+        public int RentalId { get; set; }
 
         public int ClientId { get; set; } 
          [ForeignKey("ClientId")]// Foreign key
