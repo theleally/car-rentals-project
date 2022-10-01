@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using car_rentals_project.Validations;
 using car_rentals_project.Models;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations.Schema;//Add this component to foreign keys
 
 
 namespace car_rentals_project.Models
@@ -12,8 +12,8 @@ namespace car_rentals_project.Models
         public Order() => CriadoEm = DateTime.Now;
         public int OrderId { get; set; }
 
-        public int ClientId { get; set; } // Foreign key
-         [ForeignKey("ClientId")]
+        public int ClientId { get; set; } 
+         [ForeignKey("ClientId")]// Foreign key
         public Client Client { get; set; } // Reference navigation
 
         public int AutomobilelId { get; set; } 
