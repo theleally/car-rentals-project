@@ -16,7 +16,7 @@ namespace car_rentals_project.Models
          [ForeignKey("ClientId")]// Foreign key
         public Client Client { get; set; } // Reference navigation
 
-        public int AutomobilelId { get; set; } 
+        public int AutomobileId { get; set; } 
         [ForeignKey("AutomobileId")]// Foreign key
         public Automobile Automobile { get; set; } // Reference navigation
 
