@@ -25,7 +25,7 @@ namespace car_rentals_project.Models
       
         public string Total_Days { get; set; }
 
-        [EmailAddress(ErrorMessage = "E-mail inválido!")]
+ 
         public string Start_Date { get; set; }
 
         [StringLength(
