@@ -16,14 +16,14 @@ namespace car_rentals_project.Controllers
       // GET: /api/order/listar
       [Route("listar")]
       [HttpGet]
-      public IActionResult Listar() => Ok(_context.Order.ToList());
+      public IActionResult Listar() => Ok(_context.Orders.ToList());
 
       // POST: /api/order/cadastrar
         [Route("cadastrar")]
         [HttpPost]
-        public IActionResult Cadastrar([FromBody] Order order)
+        public IActionResult Cadastrar([FromBody] Orders order)
         {
-            _context.Order.Add(order);
+            _context.Orders.Add(order);
             _context.SaveChanges();
             return Created("", order);
         }
@@ -33,10 +33,10 @@ namespace car_rentals_project.Controllers
         [HttpGet]
         public IActionResult Buscar([FromRoute] int oId)
         {
-            Order order =
-                _context.Order.FirstOrDefault
+            Orders order =
+                _context.Orders.FirstOrDefault
             (
-                o => o.OrderId.Equals(oId)
+                o => o.OrdersId.Equals(oId)
             );
 
             return order != null ? Ok(order) : NotFound();
@@ -47,11 +47,11 @@ namespace car_rentals_project.Controllers
         [HttpDelete]
         public IActionResult Deletar([FromRoute] int oId)
         {
-            Order order =
-                _context.Order.Find(oId);
+            Orders order =
+                _context.Orders.Find(oId);
             if (order != null)
             {
-                _context.Order.Remove(order);
+                _context.Orders.Remove(order);
                 _context.SaveChanges();
                 return Ok(order);
             }
@@ -61,9 +61,9 @@ namespace car_rentals_project.Controllers
         // PATCH: /api/client/alterar
         [Route("alterar")]
         [HttpPatch]
-        public IActionResult Alterar([FromBody] Order order)
+        public IActionResult Alterar([FromBody] Orders order)
         {
-            _context.Order.Update(order);
+            _context.Orders.Update(order);
             _context.SaveChanges();
             return Ok(order);
         }
