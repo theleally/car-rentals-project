@@ -2,29 +2,30 @@
 GET https://localhost:5001/api/client/listar
 
 ### Buscar um cliente
-GET https://localhost:5001/api/client/buscar/12345678912
+GET https://localhost:5001/api/client/buscar/00835987604
 
 ### Cadastrar um cliente
 POST https://localhost:5001/api/client/cadastrar
 Content-Type: application/json
 
 {
-    "name" : "Leandro Allysson",
-    "cpf" : "00835987609",    
-    "email" : "le@gmail.com",
-    "cellphone" : "(043)999999999"
+    "name" : "João",
+    "cpf" : "00835987632",    
+    "email" : "joão@gmail.com",
+    "cellphone" : "(045)999999993"
 }
 
 ### Deletar um cliente
-DELETE https://localhost:5001/api/client/deletar/1
+DELETE https://localhost:5001/api/client/deletar/5
 
 ### Alterar um cliente
 PATCH https://localhost:5001/api/client/alterar
 Content-Type: application/json
 
 {
-    "clienteid" : 2,
-    "name" : "nome editado",
-    "cpf" : "98765432112",
-    "cellphone" : "(041)912345678"
+    "clientId" : 6,
+    "name" : "Nome editado",
+    "cpf" : "11111111145",    
+    "email" : "lesdad@gmail.com",
+    "cellphone" : "(047)999999999"
 }
