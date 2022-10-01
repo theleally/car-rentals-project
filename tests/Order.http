@@ -9,8 +9,9 @@ POST https://localhost:5001/api/order/cadastrar
 Content-Type: application/json
 
 {
-    "clientId" : 1,
+    "clientId" : 3,
     "automobileId" : 21,
+    "Total_Days": "21",
     "total_price" :1000    
 }
 
