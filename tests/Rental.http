@@ -2,17 +2,20 @@
 GET https://localhost:5001/api/rental/listar
 
 ### Buscar um aluguel
-GET https://localhost:5001/api/rental/buscar/14
+GET https://localhost:5001/api/rental/buscar/1
 
 ### Cadastrar um aluguel
 POST https://localhost:5001/api/rental/cadastrar
 Content-Type: application/json
 
 {
-    "clientId" : 7,
-    "automobileId" : 24,
-    "Total_Days": "15",
-    "total_price" :1000    
+ 
+  "clientId": 1,
+  "automobileId": 1,
+  "total_Price": 3900.00,
+  "total_Days": "15",
+  "start_Date": "01/10/2022",
+  "end_Date": "16/10/2022"
 }
 
 ### Deletar um aluguel
@@ -23,8 +26,10 @@ PATCH https://localhost:5001/api/rental/alterar
 Content-Type: application/json
 
 {
-    "clientId" : 7,
-    "automobileId" : 24,
-    "Total_Days": "22",
-    "total_price" :1000    
+    "clientId": 1,
+    "automobileId": 1,
+    "total_Price": 3950.00,
+    "total_Days": "15",
+    "start_Date": "01/10/2022",
+    "end_Date": "16/10/2022"   
 }
