@@ -12,7 +12,7 @@ Content-Type: application/json
  
   "clientId": 2,
   "automobileId": 2,
-  "total_Price": 3900.00,
+  "total_Price": 3900,
   "total_Days": "15",
   "start_Date": "01/10/2022",
   "end_Date": "15/10/2022"
