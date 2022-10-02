@@ -25,11 +25,10 @@ namespace car_rentals_project.Models
       
         public string Total_Days { get; set; }
 
- 
         public string Start_Date { get; set; }
-
-     
+ 
         public string End_Date { get; set; }
+ 
         public DateTime CriadoEm { get; set; }
     }
 }
