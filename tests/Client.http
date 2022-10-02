@@ -25,7 +25,7 @@ Content-Type: application/json
 {
     "clientId" : 1,
     "name" : "João Manuel",
-    "cpf" : "00835987632",    
+    "cpf" : "00835987635",    
     "email" : "joão@gmail.com",
     "cellphone" : "(045)999999993"
 }
