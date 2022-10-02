@@ -25,15 +25,10 @@ namespace car_rentals_project.Models
       
         public string Total_Days { get; set; }
 
-        [EmailAddress(ErrorMessage = "E-mail inválido!")]
         public string Start_Date { get; set; }
-
-        [StringLength(
-            14,
-            MinimumLength = 14,
-            ErrorMessage = "O número de celular deve possuir 12 caracteres (DDD)999999999"
-        )]
+ 
         public string End_Date { get; set; }
+ 
         public DateTime CriadoEm { get; set; }
     }
 }

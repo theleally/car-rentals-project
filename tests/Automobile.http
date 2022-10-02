@@ -2,37 +2,38 @@
 GET https://localhost:5001/api/automobile/listar
 
 ### Buscar carros
-GET https://localhost:5001/api/automobile/buscar/1123446
+GET https://localhost:5001/api/automobile/buscar/EVK7897
 
 ### Cadastrar um carro
 POST https://localhost:5001/api/automobile/cadastrar/
 Content-Type: application/json
 
 {
-  //"automobileId": 21,
+
   "type": "Carro passeio",
-  "models": "Sedan",
-  "brand": "Ford",
-  "price_per_day": 260,
-  "year": "1234",
-  "placa": "1123446"
+  "models": "Onix - Sedan",
+  "brand": "Chevrolet",
+  "price_per_day": 260.00,
+  "year": "2022",
+  "placa": "EVK7897"
     
 }
 
 ### Deletar um carro
-DELETE https://localhost:5001/api/automobile/deletar/22
+DELETE https://localhost:5001/api/automobile/deletar/1
 
 ### Alterar um carro
 PATCH https://localhost:5001/api/automobile/alterar
 Content-Type: application/json
 
 {
-  "automobileId": 24,
-  "type": "Sedan",
-  "models": "fiesta",
-  "brand": "Ford",
-  "price_per_day": 100,
-  "year": "2020",
-  "criadoEm": "2022-09-24T18:43:37.968Z",
-  "placa": "4788555"
+  "automobileId": 1,
+  "type": "Carro passeio",
+  "models": "Onix - Sedan",
+  "brand": "Chevrolet",
+  "price_per_day": 260.00,
+  "year": "2022",
+  "placa": "EVK7897"
+    
+
 }

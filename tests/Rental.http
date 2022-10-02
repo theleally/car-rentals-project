@@ -9,10 +9,13 @@ POST https://localhost:5001/api/rental/cadastrar
 Content-Type: application/json
 
 {
-    "clientId" : 7,
-    "automobileId" : 24,
-    "Total_Days": "15",
-    "total_price" :1000    
+ 
+  "clientId": 3,
+  "automobileId": 3,
+  "total_Price": 3900.00,
+  "total_Days": "15",
+  "start_Date": "01/10/2022",
+  "end_Date": "16/10/2022"
 }
 
 ### Deletar um aluguel
@@ -23,8 +26,8 @@ PATCH https://localhost:5001/api/rental/alterar
 Content-Type: application/json
 
 {
-    "clientId" : 7,
-    "automobileId" : 24,
+    "clientId" : 3,
+    "automobileId" : 3,
     "Total_Days": "22",
     "total_price" :1000    
 }
