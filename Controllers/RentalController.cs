@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using car_rentals_project.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+
 
 namespace car_rentals_project.Controllers
 {
@@ -16,8 +19,15 @@ namespace car_rentals_project.Controllers
       // GET: /api/rental/listar
       [Route("listar")]
       [HttpGet]
-      public IActionResult Listar() => Ok(_context.Rental.ToList());
+      public IActionResult Listar()
+      {
+      List<Rental> rental =
+                _context.Rental.Include(f=>f.Automobile).Include(e => e.Client).ToList();
+      
+       if (rental.Count == 0) return NotFound();
 
+            return Ok(rental);
+      }
       // POST: /api/rental/cadastrar
         [Route("cadastrar")]
         [HttpPost]
