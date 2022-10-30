@@ -28,6 +28,18 @@ namespace car_rentals_project
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(
+                options => {
+                    options.AddPolicy
+                    ("CorsPolicy", builder => builder.
+                        AllowAnyOrigin().
+                        AllowAnyHeader().
+                        AllowAnyMethod()
+                    );
+                }
+            );
+            // app.UseCors("CorsPolicy");
+            
             services.AddDbContext<DataContext>
             (
                 options => options.UseSqlite("DataSource=cars.db;Cache=shared")
