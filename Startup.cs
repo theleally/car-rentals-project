@@ -60,6 +60,8 @@ namespace car_rentals_project
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "car_rentals_project v1"));
             }
+            
+            app.UseCors("CorsPolicy");
 
             app.UseHttpsRedirection();
 
