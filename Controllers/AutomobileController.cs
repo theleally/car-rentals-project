@@ -33,14 +33,14 @@ namespace car_rentals_project.Controllers
         }
 
         // GET: /api/automobile/buscar/123
-        [Route("buscar/{placa}")]
+        [Route("buscar/{id}")]
         [HttpGet]
-        public IActionResult Buscar([FromRoute] string placa)
+        public IActionResult Buscar([FromRoute] int id)
         {
             Automobile automobile =
                 _context.Automobile.FirstOrDefault
             (
-                f => f.placa.Equals(placa)
+                f => f.AutomobileId.Equals(id)
             );
 
             return automobile != null ? Ok(automobile) : NotFound();
