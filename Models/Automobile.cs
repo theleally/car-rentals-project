@@ -15,9 +15,6 @@ namespace car_rentals_project.Models
 
         public string brand { get; set; }
 
-        [Required(ErrorMessage = "O campo preço por dia é obrigatório!")]
-        public float Price_per_day { get; set; }
-
         [Required(ErrorMessage = "O campo ano é obrigatório!")]
         [StringLength(
             4,
