@@ -33,18 +33,19 @@ namespace car_rentals_project.Controllers
         }
 
         // GET: /api/client/buscar/123
-        [Route("buscar/{cpf}")]
+        [Route("buscar/{id}")]
         [HttpGet]
-        public IActionResult Buscar([FromRoute] string cpf)
+        public IActionResult Buscar([FromRoute] int id)
         {
             Client client =
                 _context.Client.FirstOrDefault
             (
-                f => f.Cpf.Equals(cpf)
+                f => f.clientId.Equals(id)
             );
 
             return client != null ? Ok(client) : NotFound();
         }
+
 
         // DELETE: /api/client/deletar/1
         [Route("deletar/{id}")]
