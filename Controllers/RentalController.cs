@@ -3,7 +3,7 @@ using System.Linq;
 using car_rentals_project.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
+using car_rentals_project.utils;
 
 
 namespace car_rentals_project.Controllers
@@ -32,7 +32,10 @@ namespace car_rentals_project.Controllers
         [Route("cadastrar")]
         [HttpPost]
         public IActionResult Cadastrar([FromBody] Rental rental)
-        {
+       {
+            rental.Total_Days_Price=
+            aluguelCalc.CalcularDiasvalor
+           (rental.Total_Price , rental.Total_Days);
             _context.Rental.Add(rental);
             _context.SaveChanges();
             return Created("", rental);

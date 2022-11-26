@@ -21,9 +21,11 @@ namespace car_rentals_project.Models
         public Automobile Automobile { get; set; } // Reference navigation
 
         [Required(ErrorMessage = "O campo preço é obrigatório!")]
-        public float Total_Price { get; set; }
+        public double Total_Price { get; set; }
       
-        public string Total_Days { get; set; }
+        public double Total_Days { get; set; }
+
+        public double Total_Days_Price { get; set; }
 
         public string Start_Date { get; set; }
  
