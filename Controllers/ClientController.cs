@@ -38,10 +38,7 @@ namespace car_rentals_project.Controllers
         public IActionResult Buscar([FromRoute] int id)
         {
             Client client =
-                _context.Client.FirstOrDefault
-            (
-                f => f.clientId.Equals(id)
-            );
+                _context.Client.Find(id);
 
             return client != null ? Ok(client) : NotFound();
         }
