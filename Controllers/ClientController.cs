@@ -60,9 +60,9 @@ namespace car_rentals_project.Controllers
             return NotFound();
         }
 
-        // PATCH: /api/client/alterar
+        // PUT: /api/client/alterar - WB
         [Route("alterar")]
-        [HttpPatch]
+        [HttpPut]
         public IActionResult Alterar([FromBody] Client client)
         {
             _context.Client.Update(client);

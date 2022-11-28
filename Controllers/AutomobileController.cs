@@ -62,9 +62,9 @@ namespace car_rentals_project.Controllers
             return NotFound();
         }
 
-        // PATCH: /api/carros/alterar
+        // PUT: /api/carros/alterar - WB
         [Route("alterar")]
-        [HttpPatch]
+        [HttpPut]
         public IActionResult Alterar([FromBody] Automobile automobile)
         {
             _context.Automobile.Update(automobile);
