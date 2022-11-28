@@ -63,7 +63,7 @@ namespace car_rentals_project.Controllers
         }
 
         // PUT: /api/carros/alterar - WB
-        [Route("alterar")]
+        [Route("alterar/{id}")]
         [HttpPut]
         public IActionResult Alterar([FromBody] Automobile automobile)
         {
