@@ -71,14 +71,19 @@ namespace car_rentals_project.Controllers
             return NotFound();
         }
 
-        // PATCH: /api/rental/alterar
-        [Route("alterar")]
-        [HttpPatch]
-        public IActionResult Alterar([FromBody] Rental rental)
+        // PUT: /api/rental/alterar/ID - WB
+        [Route("alterar/{rId}")]
+        [HttpPut]
+        public IActionResult Alterar([FromBody] Rental rental )
         {
+         
+            rental.Total_Days_Price=
+            aluguelCalc.CalcularDiasvalor
+           (rental.Total_Price , rental.Total_Days);
             _context.Rental.Update(rental);
             _context.SaveChanges();
             return Ok(rental);
         }
     }
 }
+
