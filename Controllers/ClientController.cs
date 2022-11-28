@@ -61,7 +61,7 @@ namespace car_rentals_project.Controllers
         }
 
         // PUT: /api/client/alterar - WB
-        [Route("alterar")]
+        [Route("alterar/{id}")]
         [HttpPut]
         public IActionResult Alterar([FromBody] Client client)
         {
